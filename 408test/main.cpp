@@ -1,22 +1,24 @@
 #include<iostream>
 #include<stdio.h>
 #include"node.h"
+#include"2.3.7.h"
+#include"2.2.3.h"
 using namespace std;
 
-void test(SqList s, int length) {
-	for (int i = 0; i < length; i++) {
-		for (int j = i; j < length; j++) {
-			if (s.data[i] <= s.data[j]) {
-				int t = s.data[i];
-				s.data[i] = s.data[j];
-				s.data[j] = t;
-			}
-		}
-	}
-}
 int main() {
 	cout << "hello world" << endl;
-	LinkListWithHead s;
-	//s.RunTest(test);
-	s.output();
+	SqList a;
+	a.init(9);
+	a.sort();
+	a.output();
+	SqList b;
+	b.init(9);
+	b.sort();
+	b.output();
+	//2.2.3,11Ìâ
+	/*SqList a;
+	a.init();
+	q10_swap(a.data, a.length, 5);
+	a.output();*/
+	
 }
